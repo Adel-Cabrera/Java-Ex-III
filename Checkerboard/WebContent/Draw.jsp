@@ -5,18 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Checkerboard</title>
-		<style>
-			.blue{background-color: blue;}
-			.purple{background-color: purple;}
-			.size{width: 50px; height: 50px;}
-			.outerDiv{display: table; margin-left:auto;margin-right:auto;}
-			.innerDiv{display: table-cell;}
-			.noEdge{margin: 0!important; padding: 0!important;}
-			.center{text-align: center;}
-			body{text-align: center;}
-			
-						
-		</style>
+		<link href="css/style.css" type="text/css" rel="stylesheet"/>		
 	</head>
 <body class="center">
 	
