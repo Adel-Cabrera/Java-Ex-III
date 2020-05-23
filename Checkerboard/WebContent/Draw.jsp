@@ -36,13 +36,13 @@
    		 	<% String currentClass = "";%>
    		 	
    		 	<% if (j % 2 == 0 && i % 2 == 0 ) {%>
-   		 		<% currentClass = "blue";%>
+   		 		<% currentClass = "purple";%>
    		 	<%} else if (j % 2 == 0 && i % 2 != 0 ) { %>
-   		 		<% currentClass = "purple";%>
-   		 	<%} else if (j % 2 != 0 && i % 2 == 0 ) { %>
-   		 		<% currentClass = "purple";%>
-   		 	<%} else {%>
    		 		<% currentClass = "blue";%>
+   		 	<%} else if (j % 2 != 0 && i % 2 == 0 ) { %>
+   		 		<% currentClass = "blue";%>
+   		 	<%} else {%>
+   		 		<% currentClass = "purple";%>
    		 		
    		 	<%} %>
    		 	<div class="<%= currentClass %> size innerDiv noEdge">
@@ -55,8 +55,6 @@
     
 <!--     http://localhost:8080/Checkerboard/Draw.jsp?width=10&height=5 -->
     
-<%--     <h1><%= width %></h1> --%>
-<%-- 	<h1><%= height %></h1> --%>
 	
 	
 </body>
