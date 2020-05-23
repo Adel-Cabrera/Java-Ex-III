@@ -15,42 +15,44 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Home")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Home() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public Home() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String favoriteLanguage = request.getParameter("favoriteLanguage");
-        String homeTown = request.getParameter("homeTown");
-        
-        if (firstName == null || firstName == "") {
-        	firstName = "Unknown";
-        } 
-        
-        if(lastName == null || lastName == "") {
-        	lastName = "Unknown";
-        }
-        
-        if(favoriteLanguage == null || favoriteLanguage == "") {
-        	favoriteLanguage = "Unknown";
-        }
-        
-        if(homeTown == null || homeTown == "") {
-        	homeTown = "Unknown";
-        }
-        
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String favoriteLanguage = request.getParameter("favoriteLanguage");
+		String homeTown = request.getParameter("homeTown");
+
+		if (firstName == null || firstName == "") {
+			firstName = "Unknown";
+		}
+
+		if (lastName == null || lastName == "") {
+			lastName = "Unknown";
+		}
+
+		if (favoriteLanguage == null || favoriteLanguage == "") {
+			favoriteLanguage = "Unknown";
+		}
+
+		if (homeTown == null || homeTown == "") {
+			homeTown = "Unknown";
+		}
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.write("<h1>Welcome " + firstName + " " + lastName + "</h1>");
@@ -59,14 +61,16 @@ public class Home extends HttpServlet {
 		out.write("<br>");
 		out.write("<p>Your hometown is " + homeTown + "</p>");
 
-		//http://localhost:8080/SimpleProject/Home?firstName=Adel&lastName=Cabrera&favoriteLanguage=Dart&homeTown=Berlin
+		// http://localhost:8080/SimpleProject/Home?firstName=Adel&lastName=Cabrera&favoriteLanguage=Dart&homeTown=Berlin
 
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
