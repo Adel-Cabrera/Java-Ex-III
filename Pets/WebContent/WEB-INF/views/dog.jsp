@@ -9,7 +9,7 @@
 		<title>Dog</title>
 	</head>
 <body>
-	<h1>Dog's name: <c:out value="${dog.name}"/> | Breed: <c:out value="${dog.breed}"/> | Weigth: <c:out value="${dog.getWeight()}"/> </h1>
+	<h1>Dog's name: <c:out value="${dog.name}"/> | Breed: <c:out value="${dog.breed}"/> | Weight: <c:out value="${dog.getWeight()}"/> </h1>
 	<h2>You created a <c:out value="${dog.getBreed()}" />!</h2>
 	<p><c:out value="${dog.showAffection()}"></c:out></p>
 	

@@ -6,12 +6,13 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Cat</title>
+		<title>Counter</title>
 	</head>
 <body>
-	<h1>Cat's name: <c:out value="${cat.name}"/> | Breed: <c:out value="${cat.breed}"/> | Weight: <c:out value="${cat.getWeight()}"/> </h1>
-	<p><c:out value="${cat.showAffection()}"></c:out></p>
-	<h1></h1>
+			
+	<a href="/Sessions/Counters" height:><button>Click!</button></a>
+	
+	<h1>You have clicked the button <c:out value="${count}"></c:out> times</h1>
 	
 </body>
 </html>
