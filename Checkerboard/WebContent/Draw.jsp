@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Checkerboard</title>
 		<link href="css/style.css" type="text/css" rel="stylesheet"/>		
-	</head>
+
 <body class="center">
 	
 	<% String w = request.getParameter("width"); %>
