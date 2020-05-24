@@ -40,7 +40,7 @@ public class ShowPerson extends HttpServlet {
 		Person person = new Person(name, age);
 		request.setAttribute("person", person);
 
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/showPerson.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/showPerson.jsp");
 		view.forward(request, response);
 	}
 
