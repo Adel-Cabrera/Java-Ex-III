@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.wrong {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	width: 200px;
+	height: 100px;
+	background-color: red;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.right {
+	text-align: center;
+	color: white;
+	font-weight: bold;	
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	margin-bottom: 10px;
+	padding: 10px;
+}
