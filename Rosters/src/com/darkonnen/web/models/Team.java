@@ -2,22 +2,26 @@ package com.darkonnen.web.models;
 
 import java.util.ArrayList;
 
-public class Team {
+public class Team implements java.io.Serializable {
 
-	private String team_name;
-	private ArrayList<Player> players = new ArrayList<>();
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String teamName;
+	private ArrayList<Player> players = new ArrayList<Player>();
 	private static ArrayList<Team> teams = new ArrayList<Team>();
 
-	public Team(String team_name) {
-		this.team_name = team_name;
+	public Team(String teamName) {
+		this.teamName = teamName;
 	}
 
-	public String getTeam_name() {
-		return team_name;
+	public String getTeamName() {
+		return teamName;
 	}
 
-	public static void addTeam(String team_name) {
-		Team newTeam = new Team(team_name);
+	public static void addTeam(String teamName) {
+		Team newTeam = new Team(teamName);
 		Team.teams.add(newTeam);
 	}
 

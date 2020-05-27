@@ -1,7 +1,6 @@
 package com.darkonnen.web.controllers;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import com.darkonnen.web.models.Team;
 
 /**
  * Servlet implementation class Home
@@ -38,9 +35,9 @@ public class Home extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		HttpSession session = request.getSession();
-		ArrayList<Team> teamList = Team.getTeams();
+//		ArrayList<Team> teamList = Team.getTeams();
 
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/home.jsp");
 		view.forward(request, response);
 
 	}

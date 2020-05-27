@@ -1,7 +1,6 @@
 package com.darkonnen.web.controllers;
 
 import java.io.IOException;
-import java.util.Random;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +8,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
+import com.darkonnen.web.models.Team;
 
 /**
- * Servlet implementation class GreatNumbers
+ * Servlet implementation class NewTeam
  */
-@WebServlet("/GreatNumbers")
-public class GreatNumbers extends HttpServlet {
+@WebServlet("/NewTeam")
+public class NewTeam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public GreatNumbers() {
+	public NewTeam() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -32,16 +32,8 @@ public class GreatNumbers extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		HttpSession session = request.getSession();
-		if (session.getAttribute("randomNumber") == null) {
-			Random rand = new Random();
-			int randomNumber = rand.nextInt(100) + 1;
-			session.setAttribute("randomNumber", randomNumber);
-			request.setAttribute("randomNumber", randomNumber);
-		}
-
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+		// TODO Auto-generated method stub
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/newTeam.jsp");
 		view.forward(request, response);
 	}
 
@@ -52,18 +44,13 @@ public class GreatNumbers extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-		HttpSession session = request.getSession();
-
-		if (request.getParameter("number") != null) {
-			int number = Integer.parseInt(request.getParameter("number"));
-			session.setAttribute("number", number);
+		if (request.getParameter("teamName") != null) {
+			Team.addTeam(request.getParameter("teamName"));
+			response.sendRedirect("/Rosters/Home");
 		} else {
-			session.setAttribute("number", null);
-			session.setAttribute("randomNumber", null);
+			doGet(request, response);
 		}
 
-		response.sendRedirect("/GNG/GreatNumbers");
 	}
 
 }
