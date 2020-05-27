@@ -14,8 +14,8 @@
 <body>
 	<div class="container">
 		<div class="col my-5">
-			<h1>Add a player to team </h1>
-			<form method="post" action="/Rosters/Teams?id=<%= request.getParameter("id") %>">
+			<h1>Add a player to team</h1>
+			<form method="POST" action="/Rosters/Teams?id=<%=request.getParameter("id")%>">
 				<p>First Name: <input type="text" name="first_name"></p>
 				<p>Last Name: <input type = "text" name = "last_name"></p>
 				<p>Age: <input type="number" name="age"></p>

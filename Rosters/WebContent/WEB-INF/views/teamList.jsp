@@ -42,7 +42,7 @@
 				<td><%= team.getPlayers().get(i).getFirstName() %></td>
 				<td><%= team.getPlayers().get(i).getLastName() %></td>
 				<td><%= team.getPlayers().get(i).getAge() %></td>				
-				<td><a href="/Rosters/Players?id=<%=i%>&delete=true">Delete</a></td>
+				<td><a href="/Rosters/Players?team_id=<%=request.getParameter("id")%>&player_id=<%=i%>&delete=true">Delete</a></td>
 			  </tr>
 			<%} %>
 		  </tbody>
